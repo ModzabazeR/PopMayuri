@@ -2,6 +2,7 @@
 const popmayuri = document.querySelector(".popmayuri");
 const btn = document.querySelector("#btn");
 const bg = document.querySelector(".inner");
+const body = document.querySelector(".body");
 let score = getCookie("0");
 document.getElementById("score").innerHTML = score;
 
@@ -43,7 +44,8 @@ function playTutturu() {
     testSong.play();
   } else if (score % 100 == 0) {
     popmayuri.src = specialImg;
-    document.getElementById("page-style").setAttribute("href", "rainbow.css");
+    body.className = "body rainbow";
+    popmayuri.className = "popmayuri popmayuri-spin";
     document.querySelector(".bg").style.display = "none";
     tutturuSong.play();
   } else {
@@ -65,12 +67,12 @@ function changeImg() {
   // If tutturuSong is playing
   else if (!tutturuSong.paused) {
     popmayuri.src = specialImg;
-    document.getElementById("page-style").setAttribute("href", "rainbow.css");
   }
   // If none of special sound is playing
   else {
     popmayuri.src = normalImg;
-    document.getElementById("page-style").setAttribute("href", "style.css");
+    body.className = "body";
+    popmayuri.className = "popmayuri";
     btn.disabled = false;
     document.querySelector(".bg").style.display = "none";
     document.getElementById("score").style.color = "white";

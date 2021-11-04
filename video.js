@@ -1,3 +1,6 @@
+// YouTube iframe Api
+// https://developers.google.com/youtube/iframe_api_reference
+
 // YouTube Player
 var tag = document.createElement("script");
 
@@ -5,8 +8,8 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
+// This function creates an <iframe> (and YouTube player)
+// after the API code downloads.
 var player;
 var playerVars = {
   rel: 0,
@@ -72,7 +75,7 @@ function getWindowSize() {
 
 function playVideo() {
   getWindowSize();
-  bgplayer.setPlaybackQuality("hd1080");
+  // bgplayer.setPlaybackQuality("hd1080");
   bgplayer.mute();
   bgplayer.playVideo();
 
