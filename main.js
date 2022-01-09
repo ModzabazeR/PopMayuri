@@ -6,12 +6,12 @@ const body = document.querySelector(".body");
 let score = getCookie("0");
 document.getElementById("score").innerHTML = score;
 
-// The two images of the POP CAT
+// The images of Mayuri
 const specialImg = "./images/special.png";
 const normalImg = "./images/normal.png";
 const blankImg = "./images/blank.png";
 
-// The two Popping sounds
+// The sound effects
 const tutturuSound = new Audio("./sound/tutturu.mp3");
 const tutturuSong = new Audio("./sound/tutturu-song-1.mp3");
 const testSong = new Audio("./sound/TEST.mp3");
@@ -79,6 +79,7 @@ function changeImg() {
   }
 }
 
+// Handle cookies
 function setCookie(cscore, cvalue) {
   document.cookie = cscore + "=" + cvalue;
 }
